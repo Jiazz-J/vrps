@@ -19,7 +19,7 @@ create table applicationstatus(empid varchar(10),referenceid varchar(15),admin n
 
 
 
-create or replace insertall(empid in personaldetails.empid%type,fullname in personaldetails.fullname%type,
+create or replace procedure insertall(empid in personaldetails.empid%type,fullname in personaldetails.fullname%type,
 dob in personaldetails.dob%type,gender in personaldetails.gender%type,mobile in personaldetails.mobile%type,
 email in personaldetails.email%type,address in personaldetails.address%type,designation in workdetails.designation%type,
 ctc in workdetails.ctc%type,currentlocation in workdetails.currentlocation%type,requiredlocation in workdetails.requiredlocation%type,
@@ -41,4 +41,5 @@ insert into applicationstatus(empid,referenceid) values(empid,referenceid);
 
 end;
 /
+
 
