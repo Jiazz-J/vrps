@@ -13,3 +13,6 @@ SQL> create table projects(empid varchar(10),title varchar(20),startdate date,en
 SQL> create table educationdetails(empid varchar(10),schoolname varchar(20),schoolpercent number(3),schoolpassyear number(4),collegename varchar(20),collegepercent number(3),collegepassyear number(4),engcoursetype varchar(20),engcollegename varchar(20),engpercent number(3),engpassyear number(4),pgcoursetype varchar(20),pgcollegename varchar(20),pgpercent varchar(3),pgpassyear number(4));
 
 
+
+create table applicationstatus(empid varchar(10),referenceid varchar(15),admin number(1) default 0,tr number(1) default 0,hr number(1) default 0);
+
