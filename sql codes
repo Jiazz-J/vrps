@@ -43,3 +43,8 @@ end;
 /
 
 
+ alter table workdetails add experience number(2);
+ 
+ 
+ 
+ take care while inserting at dao level;
