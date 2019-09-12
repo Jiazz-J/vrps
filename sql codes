@@ -6,7 +6,7 @@ SQL> create table workdetails(empid varchar(10),designation varchar(20),ctc numb
 
 
 
-SQL> create table projects(empid varchar(10),title varchar(20),startdate date,enddate date,descrition varchar(100));
+SQL> create table projects(empid varchar(10),title varchar(20),startdate date,enddate date,description varchar(100));
 
 
 
