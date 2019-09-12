@@ -16,3 +16,29 @@ SQL> create table educationdetails(empid varchar(10),schoolname varchar(20),scho
 
 create table applicationstatus(empid varchar(10),referenceid varchar(15),admin number(1) default 0,tr number(1) default 0,hr number(1) default 0);
 
+
+
+
+create or replace insertall(empid in personaldetails.empid%type,fullname in personaldetails.fullname%type,
+dob in personaldetails.dob%type,gender in personaldetails.gender%type,mobile in personaldetails.mobile%type,
+email in personaldetails.email%type,address in personaldetails.address%type,designation in workdetails.designation%type,
+ctc in workdetails.ctc%type,currentlocation in workdetails.currentlocation%type,requiredlocation in workdetails.requiredlocation%type,
+appliedjob in workdetails.appliedjob%type,skills in workdetails.skills%type,title in projects.title%type,startdate in projects.startdate%type,
+enddate in projects.enddate%type,description in projects.description%type,
+schoolname in educationdetails.schoolname%type,schoolpercent in educationdetails.schoolpercent%type,schoolpassyear in educationdetails.schoolpassyear%type,
+collegename in educationdetails.collegename%type,collegepercent in educationdetails.collegepercent%type,collegepassyear in educationdetails.collegepassyear%type,
+engcoursetype in educationdetails.engcoursetpye%type,engcollegename in educationdetails.engcollegename%type,engpercent in educationdetails.engpercent%type,
+engpassyear in educationdetails.engpassyear%type,pgcoursetype in educationdetails.pgcoursetype%type,pgcollegename in educationdetails.pgcollegename%type,
+pgpercent in educationdetails.pgpercent%type,pgpassyear in educationdetails.pgpassyear%type, referenceid in applicationstatus.referenceid%type ) as
+
+begin
+
+insert into personaldetails values(empid,fullname,dob,gender,mobile,email,address);
+insert into workdetails values(empid,designation,ctc,currentlocation,requiredlocation,appliedjob,skills);
+insert into projects values(empid,title,startdate,enddate,description)
+insert into educationdetails(empid,schoolname,schoolpercent,schoolpassyear,collegename,collegepercent,collegepassyear,engcoursetype,engcollegename,engpercent,engpassyear,pgcoursetype,pgcollegename,pgpercent,pgpasssyear);
+insert into applicationstatus(empid,referenceid) values(empid,referenceid);
+
+end;
+/
+
