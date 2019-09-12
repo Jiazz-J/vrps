@@ -2,7 +2,7 @@ SQL> create table personaldetails(empid varchar2(10),fullname varchar(30),dob da
 
 .
 
-SQL> create table workdetails(empid varchar(10),designation varchar(20),ctc number(10),currentlocation varchar(20),requiredlocation varchar(20),appliedjob varchar(10),skills varchar(100));
+SQL> create table workdetails(empid varchar(10),designation varchar(20),ctc number(10),currentlocation varchar(20),requiredlocation varchar(20),experience number(2),appliedjob varchar(10),skills varchar(100));
 
 
 
@@ -43,7 +43,7 @@ end;
 /
 
 
- alter table workdetails add experience number(2);
+ 
  
  
  
