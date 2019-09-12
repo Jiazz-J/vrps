@@ -1,0 +1,15 @@
+SQL> create table personaldetails(empid varchar2(10),fullname varchar(30),dob date,gender varchar(8),mobile number(12),email varchar(30),address varchar(100));
+
+.
+
+SQL> create table workdetails(empid varchar(10),designation varchar(20),ctc number(10),currentlocation varchar(20),requiredlocation varchar(20),appliedjob varchar(10),skills varchar(100));
+
+
+
+SQL> create table projects(empid varchar(10),title varchar(20),startdate date,enddate date,descrition varchar(100));
+
+
+
+SQL> create table educationdetails(empid varchar(10),schoolname varchar(20),schoolpercent number(3),schoolpassyear number(4),collegename varchar(20),collegepercent number(3),collegepassyear number(4),engcoursetype varchar(20),engcollegename varchar(20),engpercent number(3),engpassyear number(4),pgcoursetype varchar(20),pgcollegename varchar(20),pgpercent varchar(3),pgpassyear number(4));
+
+
